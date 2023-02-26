@@ -17,7 +17,7 @@ async function run() {
         await client.connect();
     const database = client.db("task-1");
         const collection = database.collection("sectorcollection");
-    
+
         app.post('/sectorcollection', async (req, res) => {
             const data = req.body;
             //console.log(data);
