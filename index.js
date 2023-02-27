@@ -8,8 +8,8 @@ app.use(express.json());
 var ObjectId = require('mongodb').ObjectId; 
 
 const { MongoClient, ServerApiVersion} = require('mongodb');
-const uri = "mongodb+srv://task:UdXVTodmp8A4kdTP@cluster0.w5uf7.mongodb.net/?retryWrites=true&w=majority";
-//console.log(uri);
+const uri = `mongodb+srv://${process.env.DB_NAME}:${process.env.DB_PASS}@cluster0.w5uf7.mongodb.net/?retryWrites=true&w=majority`;
+console.log(uri);
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 async function run() {
