@@ -25,6 +25,7 @@ async function run() {
             //console.log(result);
             res.json(result);
         })
+        
         app.get('/sectorcollection', async (req, res) => {
             const cursor = collection.find({});
             const result = await cursor.toArray();
